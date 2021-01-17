@@ -41,6 +41,8 @@ namespace PaintClone
             this.YellowButton = new System.Windows.Forms.ToolStripButton();
             this.BlackButton = new System.Windows.Forms.ToolStripButton();
             this.WhiteButton = new System.Windows.Forms.ToolStripButton();
+            this.EraserButton = new System.Windows.Forms.ToolStripButton();
+            this.temp = new System.Windows.Forms.ToolStripButton();
             this.canvasBox = new System.Windows.Forms.PictureBox();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.menuStrip.SuspendLayout();
@@ -72,14 +74,14 @@ namespace PaintClone
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(231, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.saveAsToolStripMenuItem.Text = "Save As...";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
             // saveImageAsToolStripMenuItem
             // 
             this.saveImageAsToolStripMenuItem.Name = "saveImageAsToolStripMenuItem";
-            this.saveImageAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveImageAsToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
             this.saveImageAsToolStripMenuItem.Text = "Exit";
             this.saveImageAsToolStripMenuItem.Click += new System.EventHandler(this.saveImageAsToolStripMenuItem_Click);
             // 
@@ -92,7 +94,9 @@ namespace PaintClone
             this.BlueButton,
             this.YellowButton,
             this.BlackButton,
-            this.WhiteButton});
+            this.WhiteButton,
+            this.EraserButton,
+            this.temp});
             this.colorStrip.Location = new System.Drawing.Point(0, 26);
             this.colorStrip.Name = "colorStrip";
             this.colorStrip.Size = new System.Drawing.Size(800, 25);
@@ -172,6 +176,30 @@ namespace PaintClone
             this.WhiteButton.Text = "White";
             this.WhiteButton.Click += new System.EventHandler(this.WhiteButton_Click);
             // 
+            // EraserButton
+            // 
+            this.EraserButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.EraserButton.Font = new System.Drawing.Font("Eurostile Extended", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EraserButton.ForeColor = System.Drawing.Color.DarkRed;
+            this.EraserButton.Image = ((System.Drawing.Image)(resources.GetObject("EraserButton.Image")));
+            this.EraserButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.EraserButton.Name = "EraserButton";
+            this.EraserButton.Size = new System.Drawing.Size(58, 22);
+            this.EraserButton.Text = "Erase";
+            this.EraserButton.Click += new System.EventHandler(this.EraserButton_Click);
+            // 
+            // temp
+            // 
+            this.temp.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.temp.Font = new System.Drawing.Font("Eurostile Extended", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.temp.ForeColor = System.Drawing.Color.Crimson;
+            this.temp.Image = ((System.Drawing.Image)(resources.GetObject("temp.Image")));
+            this.temp.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.temp.Name = "temp";
+            this.temp.Size = new System.Drawing.Size(66, 22);
+            this.temp.Text = "CLEAR";
+            this.temp.Click += new System.EventHandler(this.ClearButton_Click);
+            // 
             // canvasBox
             // 
             this.canvasBox.BackColor = System.Drawing.Color.Azure;
@@ -221,6 +249,8 @@ namespace PaintClone
         private System.Windows.Forms.ToolStripButton WhiteButton;
         private System.Windows.Forms.PictureBox canvasBox;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.ToolStripButton temp;
+        private System.Windows.Forms.ToolStripButton EraserButton;
     }
 }
 

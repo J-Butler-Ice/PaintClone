@@ -100,5 +100,17 @@ namespace PaintClone
         {
             Close();
         }
+
+        private void EraserButton_Click(object sender, EventArgs e)
+        {
+            p.Color = Color.Azure;
+        }
+
+
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            bmp = new Bitmap(1024, 768);
+            canvasBox.Image = bmp;
+        }
     }
 }
